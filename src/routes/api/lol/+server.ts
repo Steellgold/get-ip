@@ -1,5 +1,6 @@
-import type { RequestHandler } from "@sveltejs/kit";
+import { json, type RequestHandler } from "@sveltejs/kit";
 
 export const GET: RequestHandler = async () => {
-  return new Response(JSON.parse("Hello, world!"))
+  const number = Math.floor(Math.random() * 6) + 1;
+  return json(number);
 };
