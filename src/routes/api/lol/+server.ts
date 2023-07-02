@@ -1,5 +1,5 @@
 import type { RequestHandler } from "@sveltejs/kit";
 
 export const GET: RequestHandler = async () => {
-  return new Response("Hello, world!");
+  return new Response(JSON.parse("Hello, world!"))
 };
